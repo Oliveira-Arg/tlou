@@ -40,9 +40,9 @@ const server = http.createServer((req, res) => {
   } else if (url == '/downloads') {
     // carregar o arquivo html
     arquivoHtml = fs.readFileSync('./public/downloads.html');
-  } else if (url == '/duvidas') {
+  } else if (url == '/historia') {
     // carregar o arquivo html
-    arquivoHtml = fs.readFileSync('./public/duvidas.html');
+    arquivoHtml = fs.readFileSync('./public/historia.html');
   } else {
     // carregar o arquivo html
     arquivoHtml = fs.readFileSync('./public/erro.html');
