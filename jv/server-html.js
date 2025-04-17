@@ -28,12 +28,21 @@ const server = http.createServer((req, res) => {
   if (url == '/') {
     // carregar o arquivo html
     arquivoHtml = fs.readFileSync('./public/index.html');
-  } else if (url == '/sobre') {
+  } else if (url == '/personagens') {
     // carregar o arquivo html
-    arquivoHtml = fs.readFileSync('./public/sobre.html');
-  } else if (url == '/contato') {
+    arquivoHtml = fs.readFileSync('./public/personagens.html');
+  } else if (url == '/jogos') {
     // carregar o arquivo html
-    arquivoHtml = fs.readFileSync('./public/contato.html');
+    arquivoHtml = fs.readFileSync('./public/jogos.html');
+  } else if (url == '/seriado') {
+    // carregar o arquivo html
+    arquivoHtml = fs.readFileSync('./public/seriado.html');
+  } else if (url == '/downloads') {
+    // carregar o arquivo html
+    arquivoHtml = fs.readFileSync('./public/downloads.html');
+  } else if (url == '/duvidas') {
+    // carregar o arquivo html
+    arquivoHtml = fs.readFileSync('./public/duvidas.html');
   } else {
     // carregar o arquivo html
     arquivoHtml = fs.readFileSync('./public/erro.html');
