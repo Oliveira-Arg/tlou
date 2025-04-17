@@ -1,30 +1,66 @@
 <!DOCTYPE html>
-<html lang="pt_BR">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Página básica para servidor HTTP estático</title>
+    <title>The Last of Us</title>
     <style>
         body {
-            background-color: azure;
-            color: #060606;
-            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background-color: #1c1c1c;
+            color: #ffffff;
+        }
+
+        .sidebar {
+            width: 250px;
+            height: 100vh;
+            background-color: #2b2b2b;
+            padding: 20px;
+            position: fixed;
+        }
+
+        .sidebar h1 {
+            text-align: center;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .sidebar ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .sidebar ul li {
+            margin: 15px 0;
+        }
+
+        .sidebar ul li a {
+            text-decoration: none;
+            color: #ffffff;
+            font-size: 18px;
+            padding: 10px;
+            display: block;
+            transition: background 0.3s;
+        }
+
+        .sidebar ul li a:hover {
+            background-color: #3c3c3c;
+            border-radius: 5px;
         }
     </style>
 </head>
 <body>
-    <h1>Página básica para Servidor HTTP estático.</h1>
-
-    <a href="sobre.html">Sobre</a>
-    <a href="contato.html">Contato</a>
-    
-    <p>Carrinho</p>
-    <ul>
-        <li>Arroz</li>
-        <li>Feijão</li>
-        <li>Tomate</li>
-        <li>Macarrão</li>
-    </ul>
-
+    <div class="sidebar">
+        <h1>The Last of Us</h1>
+        <ul>
+            <li><a href="#index">Início</a></li>
+            <li><a href="#personagens">Personagens</a></li>
+            <li><a href="#historia">História</a></li>
+            <li><a href="#jogos">Jogos</a></li>
+            <li><a href="#seriado">Série</a></li>
+            <li><a href="#downloads">Links</a></li>
+        </ul>
+    </div>
 </body>
 </html>
