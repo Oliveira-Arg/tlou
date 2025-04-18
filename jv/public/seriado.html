@@ -1,11 +1,218 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pagina3</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Last of Us - Seriado</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #1a1a1a;
+            color: #f0f0f0;
+        }
+
+        .hamburger {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            z-index: 1001;
+            width: 30px;
+            height: 25px;
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .hamburger span {
+            height: 4px;
+            background: #98c379;
+            border-radius: 4px;
+            transition: 0.3s;
+        }
+
+        .sidebar {
+            position: fixed;
+            top: 0;
+            left: -250px;
+            width: 250px;
+            height: 100%;
+            background-color: #111;
+            padding-top: 60px;
+            transition: left 0.3s ease;
+            z-index: 1000;
+        }
+
+        .sidebar.open {
+            left: 0;
+        }
+
+        .sidebar h2 {
+            margin: 0;
+            padding: 20px 24px;
+            font-size: 1.6em;
+            color: #98c379;
+            border-bottom: 1px solid #333;
+        }
+
+        .sidebar a {
+            display: block;
+            padding: 16px 24px;
+            color: #ccc;
+            text-decoration: none;
+            border-bottom: 1px solid #333;
+            transition: background 0.2s;
+        }
+
+        .sidebar a:hover {
+            background-color: #222;
+            color: #fff;
+        }
+
+        main {
+            padding: 100px 20px 40px;
+            max-width: 1200px;
+            margin: auto;
+            transition: margin-left 0.3s ease;
+        }
+
+        main.shifted {
+            margin-left: 300px;
+        }
+
+        @media (max-width: 768px) {
+            main.shifted {
+                margin-left: 0;
+            }
+        }
+
+
+        .content-box {
+            background-color: #2a2a2a;
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+        }
+
+        section {
+            margin-bottom: 60px;
+        }
+
+        h1,
+        h2 {
+            color: #98c379;
+        }
+
+        p {
+            line-height: 1.6;
+        }
+    </style>
 </head>
+
 <body>
-    <h1>Pagina3</h1>
+
+    <!-- Botão Hamburguer -->
+    <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+
+    <!-- Sidebar lateral -->
+    <div class="sidebar" id="sidebar">
+        <h2>The Last of Us</h2>
+        <a href="/">Início</a>
+        <a href="/historia">História</a>
+        <a href="/personagens">Personagens</a>
+        <a href="/jogos">Jogos</a>
+        <a href="/seriado">Seriado</a>
+        <a href="/downloads">Downloads</a>
+    </div>
+
+    <!-- Conteúdo principal -->
+    <main id="mainContent">
+        <div class="content-box">
+            <section id="inicio">
+                <h1>Episódio 1: "Quando Estiver Perdido na Escuridão"</h1>
+                <p>
+                    A série se inicia com um prólogo ambientado em 1968, onde especialistas discutem a possibilidade de uma pandemia causada por fungos, estabelecendo o tom científico e sombrio da narrativa. Em 2003, acompanhamos Joel, sua filha Sarah e seu irmão Tommy tentando escapar do início do surto do fungo Cordyceps em Austin, Texas. A tragédia se abate quando Sarah é morta por um soldado, evento que marca profundamente Joel. Vinte anos depois, em 2023, Joel vive como contrabandista em Boston, onde é contratado, junto com sua parceira Tess, para transportar Ellie, uma adolescente que pode ser a chave para a cura, até os Vagalumes.
+                </p>
+                <h1>Episódio 2: "Infectados"</h1>
+                <p>
+                    Este episódio começa com um flashback em Jacarta, Indonésia, onde uma cientista descobre os primeiros sinais do surto do fungo Cordyceps, destacando a gravidade da situação. No presente, Joel, Tess e Ellie enfrentam os perigos fora da zona de quarentena, incluindo encontros tensos com infectados em um museu abandonado. A tensão aumenta quando Tess revela ter sido mordida e decide se sacrificar para garantir a fuga de Joel e Ellie, demonstrando a crescente importância da missão.
+                </p>
+                <h1>Episódio 3: "Muito, Muito Tempo"</h1>
+                <p>
+                    Este episódio foca na história de Bill, um sobrevivente solitário que transforma sua cidade em uma fortaleza. Sua vida muda ao conhecer Frank, com quem desenvolve uma profunda relação amorosa ao longo de anos. A narrativa paralela mostra Joel e Ellie chegando à cidade de Bill, onde encontram uma carta deixada por ele, refletindo sobre amor e sobrevivência. Este episódio é notável por sua abordagem sensível e humanizada do amor em tempos de crise.
+                </p>
+                <h1>Episódio 4: "Por Favor, Aguente Minha Mão"</h1>
+                <p>
+                    Joel e Ellie continuam sua jornada, agora em um veículo, e acabam em Kansas City, onde enfrentam emboscadas de caçadores liderados por Kathleen. O episódio destaca o desenvolvimento do vínculo entre Joel e Ellie, especialmente através de momentos de humor e confiança mútua. A tensão aumenta quando eles são surpreendidos por Henry e Sam, dois irmãos em fuga.
+                </p>
+                <h1>Episódio 5: "Aguente e Sobreviva"</h1>
+                <p>
+                    Henry e Sam se unem a Joel e Ellie na tentativa de escapar de Kansas City. Durante a fuga, enfrentam uma horda de infectados, incluindo um estalador, em uma sequência de ação intensa. A tragédia ocorre quando Sam, após ser mordido, se transforma e é morto por Henry, que, devastado, tira a própria vida. Este episódio é um dos mais emocionantes da temporada, explorando temas de perda e desespero.
+                </p>
+                <h1>Episódio 6: "Parentesco"</h1>
+                <p>
+                    Joel e Ellie chegam a Jackson, Wyoming, onde reencontram Tommy, irmão de Joel, que agora vive em uma comunidade autossuficiente. Joel, sentindo-se envelhecido e temendo por Ellie, considera deixar a missão para Tommy. No entanto, após uma conversa sincera, decide continuar com Ellie, fortalecendo ainda mais o laço entre eles.
+                </p>
+                <h1>Episódio 7: "Deixe-me Sozinha"</h1>
+                <p>
+                    Este episódio é um flashback baseado no DLC "Left Behind", mostrando Ellie e sua amiga Riley explorando um shopping abandonado. Através de momentos de diversão e intimidade, é revelado o profundo vínculo entre as duas, culminando em um beijo. A alegria é interrompida quando ambas são mordidas por infectados; Riley sucumbe, enquanto Ellie descobre sua imunidade. No presente, Ellie cuida de Joel, ferido, demonstrando sua determinação e carinho.
+                </p>
+                <h1>Episódio 8: "Quando Precisamos"</h1>
+                <p>
+                    Ellie busca suprimentos para salvar Joel e encontra David, líder de um grupo de sobreviventes. Inicialmente amigável, David revela intenções sinistras, incluindo canibalismo e tentativa de abuso. Ellie consegue escapar e, em uma cena intensa, mata David. Joel, recuperado, encontra Ellie em estado de choque, oferecendo-lhe conforto paternal.
+                </p>
+                <h1>Episódio 9: "Procure a Luz"</h1>
+                <p>
+                    Joel e Ellie finalmente chegam ao hospital dos Vagalumes em Salt Lake City. Lá, Joel descobre que a criação da cura exigirá a morte de Ellie. Incapaz de aceitar isso, ele mata os Vagalumes, incluindo Marlene, e resgata Ellie inconsciente. Ao acordar, Ellie questiona Joel sobre o ocorrido, e ele mente, dizendo que os Vagalumes desistiram da cura. O episódio termina com Ellie pedindo a Joel que jure estar dizendo a verdade, e ele afirma que sim, encerrando a temporada com uma nota de ambiguidade moral.​
+                </p>
+            </section>
+        </div>
+    </main>
+
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const sidebar = document.getElementById('sidebar');
+        const main = document.querySelector('main');
+
+        hamburger.addEventListener('click', () => {
+            sidebar.classList.toggle('open');
+            main.classList.toggle('shifted');
+        });
+
+        // Fecha clicando fora
+        document.addEventListener('click', (e) => {
+            if (!sidebar.contains(e.target) && !hamburger.contains(e.target)) {
+                sidebar.classList.remove('open');
+                main.classList.remove('shifted');
+            }
+        });
+
+        // Função para visualizar imagem
+        function loadImage(input, imgId) {
+            const file = input.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function (e) {
+                    const img = document.getElementById(imgId);
+                    img.src = e.target.result;
+                    img.hidden = false;
+                };
+                reader.readAsDataURL(file);
+            }
+        }
+    </script>
+
+
 </body>
+
 </html>

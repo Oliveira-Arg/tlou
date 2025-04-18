@@ -1,11 +1,211 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pagina1</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Last of Us - Personagens</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #1a1a1a;
+            color: #f0f0f0;
+        }
+
+        .hamburger {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            z-index: 1001;
+            width: 30px;
+            height: 25px;
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .hamburger span {
+            height: 4px;
+            background: #98c379;
+            border-radius: 4px;
+            transition: 0.3s;
+        }
+
+        .sidebar {
+            position: fixed;
+            top: 0;
+            left: -250px;
+            width: 250px;
+            height: 100%;
+            background-color: #111;
+            padding-top: 60px;
+            transition: left 0.3s ease;
+            z-index: 1000;
+        }
+
+        .sidebar.open {
+            left: 0;
+        }
+
+        .sidebar h2 {
+            margin: 0;
+            padding: 20px 24px;
+            font-size: 1.6em;
+            color: #98c379;
+            border-bottom: 1px solid #333;
+        }
+
+        .sidebar a {
+            display: block;
+            padding: 16px 24px;
+            color: #ccc;
+            text-decoration: none;
+            border-bottom: 1px solid #333;
+            transition: background 0.2s;
+        }
+
+        .sidebar a:hover {
+            background-color: #222;
+            color: #fff;
+        }
+
+        main {
+            padding: 100px 20px 40px;
+            max-width: 1200px;
+            margin: auto;
+            transition: margin-left 0.3s ease;
+        }
+
+        main.shifted {
+            margin-left: 300px;
+        }
+
+        @media (max-width: 768px) {
+            main.shifted {
+                margin-left: 0;
+            }
+        }
+
+
+        .content-box {
+            background-color: #2a2a2a;
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+        }
+
+        section {
+            margin-bottom: 60px;
+        }
+
+        h1,
+        h2 {
+            color: #98c379;
+        }
+
+        p {
+            line-height: 1.6;
+        }
+    </style>
 </head>
+
 <body>
-    <h1>Pagina1</h1>
+
+    <!-- Botão Hamburguer -->
+    <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+
+    <!-- Sidebar lateral -->
+    <div class="sidebar" id="sidebar">
+        <h2>The Last of Us</h2>
+        <a href="/">Início</a>
+        <a href="/historia">História</a>
+        <a href="/personagens">Personagens</a>
+        <a href="/jogos">Jogos</a>
+        <a href="/seriado">Seriado</a>
+        <a href="/downloads">Downloads</a>
+    </div>
+
+    <!-- Conteúdo principal -->
+    <main id="mainContent">
+        <div class="content-box">
+            <section id="inicio">
+                <h1>Personagens</h1>
+                <h1>1. Joel Miller</h1>
+                <p> 
+                    Joel é o personagem central do primeiro jogo e um dos mais complexos da série. Antes do surto do fungo Cordyceps, ele era apenas um pai solteiro no Texas, tentando sustentar a filha Sarah. Quando o surto começou, Joel vivenciou uma tragédia que o marcaria para sempre: a morte da filha pelas mãos de um soldado. Esse evento o transformou profundamente, fazendo dele um homem endurecido, cínico e muitas vezes frio. Vinte anos depois, ele se torna contrabandista e sobrevive à base de violência e pragmatismo. Ao aceitar a missão de escoltar Ellie, uma garota imune à infecção, Joel começa a reviver sentimentos que havia enterrado. Sua relação com Ellie evolui de forma orgânica e poderosa — de uma obrigação inicial até um vínculo paterno inquebrável. A decisão de Joel no final do primeiro jogo, ao escolher salvar Ellie e impedir uma possível cura para a humanidade, é um dos momentos mais discutidos e controversos dos games.
+                </p>
+                <h1>2. Ellie Williams</h1>
+                <p>
+                    Ellie é uma das personagens mais fascinantes da franquia. Nascida no mundo pós-apocalíptico, ela cresce sem conhecer o mundo anterior ao colapso. Imune à infecção do Cordyceps, Ellie é vista como uma possível salvação para a humanidade, o que a coloca no centro da narrativa. Inicialmente, ela é uma garota sarcástica, esperta, e cheia de perguntas sobre o passado. Mas o relacionamento com Joel se torna seu pilar emocional. Ao longo do primeiro jogo, Ellie mostra coragem, sensibilidade e inteligência, passando de protegida a protetora. Em Part II, ela é a protagonista. O trauma da perda de Joel desencadeia uma busca implacável por vingança, e ela acaba confrontando os limites de sua humanidade. Seu arco é sobre perda, culpa, e a dificuldade de perdoar — a si mesma e aos outros.
+                </p>
+                <h1>3. Sarah Miller</h1>
+                <p>
+                    Filha de Joel, Sarah aparece apenas no início do primeiro jogo, mas sua presença ecoa durante toda a história. Ela é uma adolescente gentil, afetuosa e muito próxima do pai. Sua morte logo nos primeiros minutos do jogo serve como gatilho para o desenvolvimento de Joel. A forma como a cena é construída, com ela morrendo nos braços do pai após ser baleada, é emocionalmente devastadora. Apesar de sua curta aparição, Sarah representa a última parte da humanidade de Joel antes de ele se fechar para o mundo.
+                </p>
+                <h1>4. Tommy Miller</h1>
+                <p>
+                    Tommy é o irmão mais novo de Joel. Inicialmente, os dois sobrevivem juntos ao início do surto, mas com o tempo se separam por diferenças ideológicas. Tommy acredita em reconstrução e esperança, o que o leva a se unir aos Vagalumes — um grupo rebelde que busca uma cura. Mais tarde, ele abandona essa vida para viver em Jackson, uma comunidade segura e organizada. Em Part II, ele demonstra ser mais impulsivo e determinado do que parecia, embarcando em uma missão de vingança que o consome tanto quanto a Ellie. Sua jornada mostra como o desejo de justiça pode corroer até os mais bem-intencionados.
+                </p>
+                <h1>5. Tess Servopoulos</h1>
+                <p>
+                    Parceira de Joel nos tempos de contrabando, Tess é uma mulher forte, prática e acostumada à dureza do mundo pós-apocalíptico. Ela e Joel têm uma relação de confiança mútua, e talvez até algo mais, embora isso nunca seja dito abertamente. Quando ela e Joel recebem a missão de levar Ellie aos Vagalumes, Tess acaba sendo mordida por um infectado. Ao descobrir a imunidade de Ellie, ela insiste que Joel continue a missão. Sua morte é uma das primeiras grandes perdas da narrativa, e serve para aprofundar o envolvimento de Joel com Ellie.
+                </p>
+                <h1>6. Marlene</h1>
+                <p>
+                    Líder dos Vagalumes, Marlene é uma mulher determinada e idealista, mas que também carrega o peso de decisões difíceis. Ela era amiga da mãe de Ellie e se sente responsável por protegê-la. Ao descobrir que Ellie pode ser a chave para uma cura, Marlene autoriza a cirurgia que pode matá-la, acreditando que é um sacrifício necessário. No entanto, isso a coloca em rota de colisão com Joel. Sua morte pelas mãos dele marca o fim do primeiro jogo com um tom sombrio, onde não há heróis nem vilões claros — apenas escolhas e consequências.
+                </p>
+                <h1>7. Bill</h1>
+                <p>
+                    Bill é um sobrevivente excêntrico e paranoico que vive em uma cidade cheia de armadilhas. Ele ajuda Joel e Ellie a conseguir um carro, embora a contragosto. Bill é rude e cínico, mas por trás da fachada há uma história triste: ele teve um parceiro chamado Frank, que acabou se matando após tentar fugir da convivência com Bill. Sua relação com Joel serve como um espelho do que poderia acontecer com Joel e Ellie, caso Joel seguisse negando suas emoções.
+                </p>
+            </section>
+        </div>
+    </main>
+
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const sidebar = document.getElementById('sidebar');
+        const main = document.querySelector('main');
+
+        hamburger.addEventListener('click', () => {
+            sidebar.classList.toggle('open');
+            main.classList.toggle('shifted');
+        });
+
+        // Fecha clicando fora
+        document.addEventListener('click', (e) => {
+            if (!sidebar.contains(e.target) && !hamburger.contains(e.target)) {
+                sidebar.classList.remove('open');
+                main.classList.remove('shifted');
+            }
+        });
+
+        // Função para visualizar imagem
+        function loadImage(input, imgId) {
+            const file = input.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function (e) {
+                    const img = document.getElementById(imgId);
+                    img.src = e.target.result;
+                    img.hidden = false;
+                };
+                reader.readAsDataURL(file);
+            }
+        }
+    </script>
+
+
 </body>
+
 </html>
